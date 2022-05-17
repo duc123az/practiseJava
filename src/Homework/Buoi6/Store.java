@@ -41,6 +41,7 @@ public class Store extends SmartPhone {
     }
 
     public SmartPhone[] getPhones() {
+
         for (int i = 0; i < totalPhone; i++) {
             Scanner scr = new Scanner(System.in);
             System.out.print("Nhập branch: ");
@@ -99,5 +100,15 @@ public class Store extends SmartPhone {
 
     public long totalTurnOver() {
         return totalPrice;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Information of Stores{" +
+        "Name='" + getNameStore() + '\'' +
+        ", Address=" + getAddressStore() +
+        ", TotalPhone=" + getTotalPhone() +
+        '}';
     }
 }

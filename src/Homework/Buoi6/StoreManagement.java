@@ -14,6 +14,7 @@ public class StoreManagement extends Store {
     }
 
     public int getTotalStore() {
+
         return totalStore;
     }
 
@@ -46,21 +47,16 @@ public class StoreManagement extends Store {
         this.stores = stores;
     }
 
-    // @Override
-    // public String toString() {
-    //     for(int i = 0; i < stores.length; i++) {
-    //         System.out.println("Cửa hằng thứ " + (i + 1));
-    //         System.out.println(stores[i].getNameStore());
-    //         System.out.println(stores[i].getAddressStore());
-    //         System.out.println(stores[i].getNameStore());
-    //     }
-    //     return "Full information of stores{" +
-    //             "name store=" + getNameStore() +
-    //             ", address store=" + getAddressStore() +
-    //             ", total phones=" + getTotalPhone() +
-    //             '}';
-    // }
 
+    @Override
+    public String toString() {
+
+        return "Information of Stores{" +
+        "Name='" + getNameStore() + '\'' +
+        ", Address=" + getAddressStore() +
+        ", TotalPhone=" + getTotalPhone() +
+        '}';
+    }
 
 
     public int totalPhoneHighTech() {
