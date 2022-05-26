@@ -10,7 +10,15 @@ public class AppTest {
 
         StoreManagement mainManagement = new StoreManagement(2);
 
-        System.out.println(mainManagement.getStores());
+        System.out.println(mainManagement.addStores());
+        
+        mainManagement.getStores()[1].getNameStore();
+
+
+        // for (int i = 0; i < mainManagement.getStores().length; i++) {
+        //     mainManagement.getStores()[i].toString();
+        // }
+
 
 
 
@@ -24,7 +32,7 @@ public class AppTest {
         // System.out.println(mainManagement.totalPhoneHighTech());
 
         // Store NVL = new Store("Nguyễn Văn lượng", "1144/34 Nguyễn Văn Lượng", 3);
-        // System.out.println(NVL.getPhones());
+        // System.out.println(NVL.addPhone());
         // System.out.println("Tổng số điện thoại bán được: " + NVL.totalPhoneSold());
         // System.out.println("Doanh số của tiệm: " + NVL.totalTurnOver());
     }

@@ -40,8 +40,7 @@ public class Store extends SmartPhone {
         this.totalPhone = totalPhone;
     }
 
-    public SmartPhone[] getPhones() {
-
+    public SmartPhone[] addPhones() {
         for (int i = 0; i < totalPhone; i++) {
             Scanner scr = new Scanner(System.in);
             System.out.print("Nhập branch: ");
@@ -78,6 +77,10 @@ public class Store extends SmartPhone {
             SmartPhone phone = new SmartPhone(branch, hasBuetooth, has5G, hasWifi, os, memory, color, price, totalSold);
             phones[i] = phone;
         }
+        return phones;
+    }
+
+    public SmartPhone[] getPhones() {
         return phones;
     }
 

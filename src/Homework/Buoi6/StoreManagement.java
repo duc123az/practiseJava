@@ -22,7 +22,7 @@ public class StoreManagement extends Store {
         this.totalStore = totalStore;
     }
 
-    public Store[] getStores() {
+    public Store[] addStores() {
         for (int i = 0; i < stores.length; i++) {
             Scanner scr = new Scanner(System.in);
             System.out.print("Nhập tên cửa hàng: ");
@@ -31,7 +31,7 @@ public class StoreManagement extends Store {
             System.out.print("Nhập địa chỉ cửa hàng: ");
             String addressStore = scr.nextLine();
 
-            System.out.print("tổng số điện thoại: ");
+            System.out.print("tổng số loại điện thoại: ");
             int totalPhone = scr.nextInt();
 
             scr.nextLine();
@@ -39,7 +39,10 @@ public class StoreManagement extends Store {
             Store store = new Store(nameStore, addressStore, totalPhone);
             stores[i] = store;
         }
+        return stores;
+    }
 
+    public Store[] getStores() {
         return stores;
     }
 
@@ -50,7 +53,6 @@ public class StoreManagement extends Store {
 
     @Override
     public String toString() {
-
         return "Information of Stores{" +
         "Name='" + getNameStore() + '\'' +
         ", Address=" + getAddressStore() +
