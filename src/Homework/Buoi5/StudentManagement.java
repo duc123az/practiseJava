@@ -53,7 +53,7 @@ public class StudentManagement {
     } 
 
     //Tìm số người rớt
-    //Dấu chấm than trước student để nó hiểu là ngược lại False
+    //Dấu chấm than trước student để nó hiểu là ngược lại  (False)
     public int totalStudentFail() {
         int numFail = 0;
         for (int i = 0; i < students.length; i++) {
