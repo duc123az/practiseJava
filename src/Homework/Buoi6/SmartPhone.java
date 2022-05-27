@@ -100,15 +100,15 @@ public class SmartPhone {
     @Override
     public String toString() {
         return "smartPhone{" +
-                "branch='" + branch + '\'' +
-                ", hasBuetooth=" + hasBuetooth +
-                ", has5G=" + has5G +
-                ", hasWWifi=" + hasWifi +
-                ", os='" + os + '\'' +
-                ", memory=" + memory +
-                ", color='" + color + '\'' +
-                ", price=" + price +
-                ", totalSold=" + totalSold +
+                "branch='" + getBranch() + '\'' +
+                ", hasBuetooth=" + isHasBuetooth() +
+                ", has5G=" + isHas5G() +
+                ", hasWWifi=" + isHasWifi() +
+                ", os='" + getOs() + '\'' +
+                ", memory=" + getMemory() +
+                ", color='" + getColor() + '\'' +
+                ", price=" + getPrice() +
+                ", totalSold=" + getTotalSold() +
                 '}';
     }
 }

@@ -12,29 +12,41 @@ public class AppTest {
 
         System.out.println(mainManagement.addStores());
         
-        mainManagement.getStores()[1].getNameStore();
+        for (int i = 0; i < mainManagement.getTotalStore(); i++) {
+            System.out.println(mainManagement.getStores()[i].toString());
+            System.out.println(mainManagement.getStores()[i].addPhones());
+        }
+
+        int highSold = 0;
+        int lowSold = Integer.MAX_VALUE;
+        for (int i = 0; i < mainManagement.getTotalStore(); i++) {
+            int a = mainManagement.getStores()[i].allPhonesSold();
+            if ( a > highSold) {
+                highSold = a;
+            }
+            if (a < lowSold) {
+                lowSold = a;
+            }
+        }
+        System.out.println("Cửa hàng bán được nhiều điện thoại nhất: " + highSold);
+        System.out.println("Cửa hàng bán được ít điện thoại nhất: " + lowSold);
+
+        long highPriceSold = 0;
+        long lowPriceSold = Long.MAX_VALUE;
+        for (int i = 0; i < mainManagement.getTotalStore(); i++) {
+            long a = mainManagement.getStores()[i].totalTurnOver();
+            if ( a > highPriceSold) {
+                highPriceSold = a;
+            }
+            if (a < lowPriceSold) {
+                lowPriceSold = a;
+            }
+        }
+        System.out.println("Cửa hàng doanh thu cao nhất: " + highPriceSold);
+        System.out.println("Cửa hàng doanh thu thấp nhất: " + lowPriceSold);
 
 
-        // for (int i = 0; i < mainManagement.getStores().length; i++) {
-        //     mainManagement.getStores()[i].toString();
-        // }
 
-
-
-
-
-        // for (Store i : mainManagement.getStores()) {
-        //     i.toString();
-        // }
-
-        // StoreManagement mainManagement = new StoreManagement(2);
-        // System.out.println(mainManagement.getStores());
-        // System.out.println(mainManagement.totalPhoneHighTech());
-
-        // Store NVL = new Store("Nguyễn Văn lượng", "1144/34 Nguyễn Văn Lượng", 3);
-        // System.out.println(NVL.addPhone());
-        // System.out.println("Tổng số điện thoại bán được: " + NVL.totalPhoneSold());
-        // System.out.println("Doanh số của tiệm: " + NVL.totalTurnOver());
+        System.out.println(mainManagement.totalPhoneHighTech());
     }
-    
 }

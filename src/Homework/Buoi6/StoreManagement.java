@@ -14,7 +14,6 @@ public class StoreManagement extends Store {
     }
 
     public int getTotalStore() {
-
         return totalStore;
     }
 
@@ -62,14 +61,14 @@ public class StoreManagement extends Store {
 
 
     public int totalPhoneHighTech() {
-        int totalhas = 0;
+        int totalHas = 0;
         for (Store i : stores) {
             for (SmartPhone j : i.phones) {
                 if(j.isHasBuetooth() == true && j.isHas5G() == true && j.isHasWifi() == true) {
-                    totalhas++;
+                    totalHas++;
                 }
             }
         }
-        return totalhas;
+        return totalHas;
     }
 }

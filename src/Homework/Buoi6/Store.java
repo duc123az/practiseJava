@@ -48,12 +48,29 @@ public class Store extends SmartPhone {
 
             System.out.print("Buetooth (true/false)? ");
             boolean hasBuetooth = scr.nextBoolean();
+            if(hasBuetooth == true) {
+                System.out.println("Có buetooth");
+            } else {
+                System.out.println("Không có buetooth");
+            }
 
             System.out.print("5G (true/false)? ");
             boolean has5G = scr.nextBoolean();
+            if(has5G == true) {
+                System.out.println("Có 5G");
+            } else {
+                System.out.println("Không có 5G");
+            }
 
             System.out.print("Wifi (true/false)? ");
             boolean hasWifi = scr.nextBoolean();
+            if(hasWifi == true) {
+                System.out.println("Có wifi");
+            } else {
+                System.out.println("Không có wifi");
+            }
+
+            scr.nextLine();
 
             System.out.print("Os bao nhiêu (vd: Os15): ");
             String os = scr.nextLine();
@@ -69,7 +86,7 @@ public class Store extends SmartPhone {
             System.out.print("Giá bao nhiêu: ");
             long price = scr.nextLong();
 
-            System.out.print("Số lượng bao nhiêu: ");
+            System.out.print("Số lượng bán được bao nhiêu: ");
             int totalSold = scr.nextInt();
 
             scr.nextLine();
@@ -88,20 +105,25 @@ public class Store extends SmartPhone {
         this.phones = phones;
     }
 
-    long totalPrice = 0;
-
-    public int totalPhoneSold() {
-        int n = 0;
+    public int allPhonesSold() {
+        int allPhoneSold = 0;
         for (int i = 0; i < phones.length; i++) {
             if(phones[i].getTotalSold() > 0) {
-                n += phones[i].getTotalSold();
-                totalPrice = phones[i].getTotalSold() * phones[i].getPrice();
+                allPhoneSold += phones[i].getTotalSold();
             }
         }
-        return n;
+        return allPhoneSold;
     }
 
     public long totalTurnOver() {
+        long totalPrice = 0;
+        long eachPrice = 0;
+        for (int i = 0; i < phones.length; i++) {
+            if(phones[i].getTotalSold() > 0) {
+                eachPrice = phones[i].getTotalSold() * phones[i].getPrice();
+            }
+            totalPrice += eachPrice;
+        }
         return totalPrice;
     }
 
